@@ -55,23 +55,17 @@ weather-app/
 
 ## 📸 Screenshots
 
-Here are some example screenshots of the weather app displaying weather data for different cities:
-
 ### 🌆 New Delhi
-
-
+![New Delhi Weather](images/New_delhi.png)
 
 ### 🌆 Mumbai
-
-
+![Mumbai Weather](images/mumbai.png)
 
 ### 🗽 New York
-
-
+![New York Weather](images/New_york.png)
 
 ### 🏰 Moscow
-
-
+![Moscow Weather](images/Moscow.png)
 
 ## 🤝 Contributions
 
