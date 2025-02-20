@@ -59,7 +59,7 @@ weather-app/
 ![New Delhi Weather](images/New_delhi.png)
 
 ### 🌆 Mumbai
-![Mumbai Weather](images/mumbai.png)
+![Mumbai Weather](images/Mumbai.png)
 
 ### 🗽 New York
 ![New York Weather](images/New_york.png)
