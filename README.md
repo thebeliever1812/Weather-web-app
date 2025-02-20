@@ -1,10 +1,10 @@
-🌤️ Weather App
+# &#x20;Weather App
 
-📌 Overview
+## 📌 Overview
 
 This is a simple Weather App that allows users to search for weather conditions in any city. It fetches real-time weather data from the WeatherAPI and displays information such as temperature, humidity, wind speed, and weather icons representing the current conditions.
 
-✨ Features
+## ✨ Features
 
 ✅ Search weather conditions for any city 🌍
 ✅ Displays real-time temperature 🌡️, humidity 💧, and wind speed 🌬️
@@ -12,66 +12,67 @@ This is a simple Weather App that allows users to search for weather conditions 
 ✅ Handles invalid city inputs with error messages ⚠️
 ✅ Responsive and modern UI using Bootstrap 🎨
 
-🛠️ Technologies Used
+## 🛠️ Technologies Used
 
-HTML 🏗️
+- HTML 🏗️
+- CSS 🎨 (Bootstrap for styling)
+- JavaScript 💻
+- WeatherAPI 🌍 (for fetching weather data)
 
-CSS 🎨 (Bootstrap for styling)
+## 🚀 Installation and Usage
 
-JavaScript 💻
+### 1️⃣ Clone the Repository
 
-WeatherAPI 🌍 (for fetching weather data)
-
-🚀 Installation and Usage
-
-1️⃣ Clone the Repository
-
+```sh
 git clone https://github.com/your-username/weather-app.git
 cd weather-app
+```
 
-2️⃣ Open in Browser
+### 2️⃣ Open in Browser
 
-Simply open the index.html file in your web browser.
+Simply open the `index.html` file in your web browser.
 
-3️⃣ API Key Setup 🔑
+### 3️⃣ API Key Setup 🔑
 
 This app uses WeatherAPI for fetching weather data. To use it with your own API key:
 
-Go to WeatherAPI and sign up for an API key.
+1. Go to [WeatherAPI](https://www.weatherapi.com/) and sign up for an API key.
+2. Replace the existing API key in `script.js` with your own:
+   ```js
+   let apiUrl = `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${city_name}`
+   ```
 
-Replace the existing API key in script.js with your own:
+## 📂 File Structure
 
-let apiUrl = `https://api.weatherapi.com/v1/current.json?key=YOUR_API_KEY&q=${city_name}`
-
-📂 File Structure
-
+```
 weather-app/
 │── index.html        # 🌍 Main HTML file
 │── style.css         # 🎨 Stylesheet for the app
 │── script.js         # ⚙️ JavaScript logic for fetching and displaying weather
 │── images/           # 🖼️ Folder containing weather icons
 │── README.md         # 📖 Project documentation
+```
 
-📸 Screenshots
+## 📸 Screenshots
 
 Here are some example screenshots of the weather app displaying weather data for different cities:
 
-🌆 New Delhi
+### 🌆 New Delhi
 
 
 
-🌆 Mumbai
+### 🌆 Mumbai
 
 
 
-🗽 New York
+### 🗽 New York
 
 
 
-🏰 Moscow
+### 🏰 Moscow
 
 
 
-🤝 Contributions
+## 🤝 Contributions
 
 Feel free to fork this project, raise issues, or submit pull requests for improvements! 🚀
