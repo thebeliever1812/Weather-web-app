@@ -1,4 +1,4 @@
-# &#x20;Weather App
+# 🌤️ Weather App
 
 ## 📌 Overview
 
@@ -10,12 +10,13 @@ This is a simple Weather App that allows users to search for weather conditions 
 ✅ Displays real-time temperature 🌡️, humidity 💧, and wind speed 🌬️
 ✅ Dynamic weather icons 🎨
 ✅ Handles invalid city inputs with error messages ⚠️
+✅ Error handling for API failures and unexpected responses 🛠️
 ✅ Responsive and modern UI using Bootstrap 🎨
 
 ## 🛠️ Technologies Used
 
 - HTML 🏗️
-- CSS 🎨 (Bootstrap for styling)
+- CSS 🎨 (with Bootstrap)
 - JavaScript 💻
 - WeatherAPI 🌍 (for fetching weather data)
 
@@ -24,8 +25,7 @@ This is a simple Weather App that allows users to search for weather conditions 
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/weather-app.git
-cd weather-app
+git clone https://github.com/thebeliever1812/Weather-web-app.git
 ```
 
 ### 2️⃣ Open in Browser
@@ -55,6 +55,8 @@ weather-app/
 
 ## 📸 Screenshots
 
+Here are some example screenshots:
+
 ### 🌆 New Delhi
 ![New Delhi Weather](images/New_delhi.png)
 
@@ -66,6 +68,13 @@ weather-app/
 
 ### 🏰 Moscow
 ![Moscow Weather](images/Moscow.png)
+
+## 🛠️ Error Handling
+
+This app includes error handling for various situations:
+
+- **Invalid City Name**: Displays a message if the entered city is not found.
+- **Unexpected Server Responses**: If the server returns an unexpected status code, the app throws an error with a message like `Unexpected error occurred (status code). Please try again`.
 
 ## 🤝 Contributions
 
