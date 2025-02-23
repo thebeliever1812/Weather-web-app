@@ -23,33 +23,40 @@ function updateWeather(data) {
 
 // Function to update Weather Icon
 function updateWeatherIcon(text, is_day) {
-    if (text === 'Sunny' && is_day === 1) return 'images/sunny.png';
-    else if (text === 'Mist' && is_day === 1) { return 'images/mist_day.png' }
-    else if (text === 'Mist' && is_day === 0) { return 'images/mist_night.png' }
-    else if (text === 'Moderate or heavy rain with thunder') return 'images/rain_thunder.png'
-    else if (text === 'Clear' && is_day === 1) { return 'images/clear-sky.png' }
-    else if (text === 'Clear' && is_day === 0) { return 'images/clear_night.png' }
-    else if (text === 'Light snow') return 'images/snowing.png'
-    else if (text === 'Overcast') { return 'images/cloudy_black.png' }
-    else return 'images/cloudy.png'
+    const iconMap = {
+        "Sunny": "images/sunny.png",
+        "Mist_day": "images/mist_day.png",
+        "Mist_night": 'images/mist_night.png',
+        "Clear_day": 'images/clear-sky.png',
+        "Clear_night": 'images/clear_night.png',
+        "Light snow": 'images/snowing.png',
+        'Overcast': 'images/cloudy_black.png',
+        'Moderate or heavy rain with thunder': 'images/rain_thunder.png',
+    }
+
+    let key = text;
+    if (text === "Clear" || text === "Mist") key += is_day ? "_day" : "_night";
+    return iconMap[key] || 'images/cloudy.png'
 }
 
-function getWeather(city_name) {
+async function getWeather(city_name) {
     let apiUrl = `https://api.weatherapi.com/v1/current.json?key=28403a0868a24c889cf81429251902&q=${city_name}`
 
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', apiUrl);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText);
-            if (data.error) {
-                showAlert(data.error.message);
-                return;
-            }
-            updateWeather(data);
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error(`Unexpected error occurred (${response.status}). Please try again`);
         }
+
+        const data = await response.json();
+        if (data.error) {
+            throw new Error(data.error.message);
+        }
+        updateWeather(data);
     }
-    xhr.send();
+    catch (error) {
+        showAlert(error.message)
+    }
 }
 
 // Calling for default location weather 
