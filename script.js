@@ -16,7 +16,7 @@ function updateWeather(data) {
     temperature.innerHTML = `<strong>${temp_c}&#x2103;</strong>`
     city.innerHTML = `${name}`;
     humidity.innerHTML = `${humid}%`;
-    wind.innerHTML = `${wind_kph} km/h`;
+    wind.innerHTML = `${wind_kph}km/h`;
     // For weather icon
     weatherIcon.style.backgroundImage = `url(${updateWeatherIcon(text, is_day)})`;
 }
